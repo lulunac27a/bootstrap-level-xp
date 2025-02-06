@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function init() {
     let xp = 0;
     let xpRequired = 1;
     addXPButton.addEventListener('click', function addXP() {
-        xp = xp++;
+        xp++;
         progressBar.style.width = `${xp / xpRequired * 100}%`;
         progressBar.ariaValueNow = `${xp / xpRequired * 100}`;
         if (xp >= xpRequired) {
