@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function init() {
         progressBar.ariaValueNow = `${(xp / xpRequired) * 100}`;
         if (xp >= xpRequired) {
             level++;
+            progressBar.textContent = `$Level {level}`;
             xp -= xpRequired;
             xpRequired += level;
         }
