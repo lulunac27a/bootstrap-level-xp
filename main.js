@@ -14,8 +14,8 @@ document.addEventListener("DOMContentLoaded", function init() {
         if (xp >= xpRequired) {
             //check if XP is greater than or equal to XP required
             level++; //increase level
-            progressBar.textContent = `$Level {level}`; //update level text
-            levelText.textContent = `$Level {level}`; //update level text
+            progressBar.textContent = `Level ${level}`; //update level text
+            levelText.textContent = `Level ${level}`; //update level text
             xp -= xpRequired; //decrease XP by XP required
             xpRequired += level; //increase XP required by level
         }
