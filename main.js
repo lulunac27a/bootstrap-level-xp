@@ -2,9 +2,9 @@ document.addEventListener("DOMContentLoaded", function init() {
     //initialize app when webpage is loaded
     const progressBar = document.getElementById("progress-bar"); //progress bar
     const addXPButton = document.getElementById("add-xp"); //add XP button
-    let level = 1; //level
-    let xp = 0; //XP
-    let xpRequired = 1; //XP required to level up
+    let level = 1; //set level to 1
+    let xp = 0; //set XP to 0
+    let xpRequired = 1; //set XP required to level up to 1
     addXPButton.addEventListener("click", function addXP() {
         //event to add XP
         xp++; //add 1 XP
