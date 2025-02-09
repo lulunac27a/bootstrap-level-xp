@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function init() {
         //event to add XP
         xp++; //add 1 XP
         progressBar.style.width = `${(xp / xpRequired) * 100}%`; //update progress bar width
-        progressBar.ariaValueNow = `${(xp / xpRequired) * 100}`; //update progress bar aria value
+        progressBar.setAttribute("aria-valuenow", `${(xp / xpRequired) * 100}`); //update progress bar aria value
         if (xp >= xpRequired) {
             //check if XP is greater than or equal to XP required
             level++; //increase level
