@@ -9,8 +9,6 @@ document.addEventListener("DOMContentLoaded", function init() {
     addXPButton.addEventListener("click", function addXP() {
         //event to add XP
         xp++; //add 1 XP
-        progressBar.style.width = `${(xp / xpRequired) * 100}%`; //update progress bar width
-        progressBar.setAttribute("aria-valuenow", `${(xp / xpRequired) * 100}`); //update progress bar aria value
         if (xp >= xpRequired) {
             //check if XP is greater than or equal to XP required
             level++; //increase level
@@ -19,5 +17,7 @@ document.addEventListener("DOMContentLoaded", function init() {
             xp -= xpRequired; //decrease XP by XP required
             xpRequired += level; //increase XP required by level
         }
+        progressBar.style.width = `${(xp / xpRequired) * 100}%`; //update progress bar width
+        progressBar.setAttribute("aria-valuenow", `${(xp / xpRequired) * 100}`); //update progress bar aria value
     });
 });
