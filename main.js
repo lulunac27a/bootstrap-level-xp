@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function init() {
         }
         progressBar.style.width = `${(xp / xpRequired) * 100}%`; //update progress bar width
         progressBar.setAttribute("aria-valuenow", `${(xp / xpRequired) * 100}`); //update progress bar aria value
-        circularProgressBar.style.background = `conic-gradient(#00b7ff ${(xp / xpRequired) * 100}%, #e9ecef ${(xp / xpRequired) * 100}%)`; //update circular progress bar width
+        circularProgressBar.style.background = `conic-gradient(#007bff ${(xp / xpRequired) * 100}%, #e9ecef ${(xp / xpRequired) * 100}%)`; //update circular progress bar width
         circularProgressBar.setAttribute(
             "aria-valuenow",
             `${(xp / xpRequired) * 100}`,
