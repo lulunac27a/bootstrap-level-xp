@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function init() {
     //initialize app when webpage is loaded
     const progressBar = document.getElementById("progress-bar"); //progress bar
+    const circularProgressBar = document.getElementById("circular-progress-bar"); //circular progress bar
     const levelText = document.getElementById("level"); //level text
     const addXPButton = document.getElementById("add-xp"); //add XP button
     let level = 1; //set level to 1
@@ -19,5 +20,10 @@ document.addEventListener("DOMContentLoaded", function init() {
         }
         progressBar.style.width = `${(xp / xpRequired) * 100}%`; //update progress bar width
         progressBar.setAttribute("aria-valuenow", `${(xp / xpRequired) * 100}`); //update progress bar aria value
+        circularProgressBar.style.background = `conic-gradient(#00b7ff ${(xp / xpRequired) * 100}%, #e9ecef ${(xp / xpRequired) * 100}%)`; //update circular progress bar width
+        circularProgressBar.setAttribute(
+            "aria-valuenow",
+            `${(xp / xpRequired) * 100}`,
+        ); //update circular progress bar aria value
     });
 });
