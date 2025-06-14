@@ -1,7 +1,9 @@
 document.addEventListener("DOMContentLoaded", function init() {
     //initialize app when webpage is loaded
     const progressBar = document.getElementById("progress-bar"); //progress bar
-    const circularProgressBar = document.getElementById("circular-progress-bar"); //circular progress bar
+    const circularProgressBar = document.getElementById(
+        "circular-progress-bar",
+    ); //circular progress bar
     const levelText = document.getElementById("level"); //level text
     const addXPButton = document.getElementById("add-xp"); //add XP button
     let level = 1; //set level to 1
